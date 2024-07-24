@@ -16,3 +16,16 @@ steps:
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
+- task: FortifyOnDemandStatic@9
+  inputs:
+    FortifyProjects: '$(Build.SourcesDirectory)'
+    FodConnection: 'Fortify-OD'
+    ReleaseOptions: '0'
+    ReleaseId: 1231752
+    EntitlementSelection: '1'
+    EntitlementPreference: '1'
+    OverrideScanSettings: '2'
+    InProgressScanActionType: '2'
+    RemediationScanPreference: '0'
+    BuildType: 'none'
+    PolicyFailAction: '0'
