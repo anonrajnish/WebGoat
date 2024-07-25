@@ -29,3 +29,7 @@ steps:
     RemediationScanPreference: '0'
     BuildType: 'none'
     PolicyFailAction: '0'
+- task: WhiteSource@21
+  inputs:
+    cwd: '$(System.DefaultWorkingDirectory)'
+    projectName: 'webgoat'
